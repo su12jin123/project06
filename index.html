@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한양대학교병원</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script>
+        $(function () {
+            $('.sec3 .menu_list li').click(function () {
+                $('.sec3 .inner > .list').removeClass('on')
+                $('.sec3 .inner > .list').eq($(this).index()).addClass('on')
+                $('.sec3 .menu_list li').removeClass('on')
+                $(this).addClass('on')
+
+
+
+            })
+
+
+            $('header .pc .gnb .depth01 > a').mouseenter(function () {
+                $('header .pc .gnb .depth01 > a').next().stop().slideUp()
+                $(this).next().stop().slideDown()
+
+            })
+
+
+            $('header .pc .gnb .depth01').mouseleave(function () {
+                $('header .pc .gnb .depth02').stop().slideUp()
+            })
+
+            $('header .pc .gnb .depth02 li').mouseleave(function () {
+                $(this).css({
+                    'background-color': 'white',
+                    'color': '#333'
+                })
+
+                $('header .pc .gnb .depth02 li').mouseenter(function () {
+
+                    $(this).css({
+                        'background-color': '#0d5eab',
+                        'color': 'white'
+                    })
+                })
+
+            })
+
+
+
+            $('header .pc .login .depth01 > a').mouseenter(function () {
+                $('header .pc .login .depth01 > a').next().stop().slideUp()
+                $(this).next().stop().slideDown()
+
+            })
+            $('header .pc .login .depth01').mouseleave(function () {
+                $('header .pc .login .depth01 .depth02').stop().slideUp()
+            })
+
+            $('header .pc .login .depth02 li').mouseleave(function () {
+                $(this).css({
+                    'background-color': 'white',
+                    'color': '#333'
+                })
+
+                $('header .pc .login .depth02 li').mouseenter(function () {
+
+                    $(this).css({
+                        'background-color': '#0d5eab',
+                        'color': 'white'
+                    })
+                })
+            })
+
+
+
+            $('.sec4 .inner .list .item .item_list li').mouseenter(function () {
+                $('.sec4 .inner .list .imglist').removeClass('on')
+                $('.sec4 .inner .list .imglist').eq($(this).index()).addClass('on')
+            })
+
+
+            $('.mobile_menu img').click(function () {
+                $('.mobile_gnb').animate({
+                    right: '0'
+                })
+               
+                $('#wrap').addClass('on')
+            })
+            $('.mobile_gnb .close').click(function () {
+                $('.mobile_gnb').animate({
+                    right: '-100%'
+                })
+                $('.mobile .gnb .depth01 .depth02').stop().slideUp()
+                $('#wrap').removeClass('on')
+            })
+
+            $('.mobile .gnb .depth01>a').click(function () {
+                $('.mobile .gnb .depth01 .depth02').stop().slideUp()
+                $(this).next().stop().slideToggle()
+            })
+
+
+            $('.mobile .gnb .depth01 .depth02 li').mouseenter(function () {
+                $('.mobile .gnb .depth01 .depth02 li').css({
+                    'background-color': '#ffffff'
+                })
+                $(this).css({
+                    'background-color': '#dddddd'
+                })
+            })
+
+        })</script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <h1><a href="#">
+                        <img src="img/한양대학교병원_한영혼용.png" alt=""></a></h1>
+                <nav class="pc">
+                    <ul class="gnb">
+                        <li class="depth01">
+                            <a href="#">의료진·진료과</a>
+                            <ul class=" depth02">
+                                <li>전문 의료진 찾기</li>
+                                <li>진료과·센터</li>
+                                <li>온라인 진료예약</li>
+                                <li>예약안내</li>
+                                <li>종합검진예약</li>
+                                <li>건강정보</li>
+                            </ul>
+                        </li><!-- depth01 end -->
+                        <li class="depth01">
+
+                            <a href="#">종합안내</a>
+                            <ul class=" depth02">
+                                <li>병원이용</li>
+                                <li>외래진료</li>
+                                <li>입원진료</li>
+                                <li>검사실 안내</li>
+                                <li>제증명 의무기록 발급</li>
+                                <li>비급여진료비</li>
+                                <li>기타안내</li>
+                            </ul>
+                        </li>
+                        <li class="depth01">
+
+                            <a href="#">한양story</a>
+                            <ul class=" depth02">
+                                <li>Hihy 건강저장소</li>
+                                <li>병원소식</li>
+                                <li>언론보도</li>
+                                <li>한양人</li>
+                                <li>한양토픽</li>
+                                <li>의료원 매거진</li>
+                                <li>뉴스레터</li>
+                                <li>사회공헌</li>
+                            </ul>
+                        </li><!-- depth01 end -->
+                        <li class="depth01">
+
+                            <a href="#">고객서비스</a>
+                            <ul class=" depth02">
+                                <li>자주 하는 질문</li>
+                                <li>고객상담실</li>
+                                <li>각종 양식 모음</li>
+                            </ul>
+                        </li><!-- depth01 end -->
+                        <li class="depth01">
+
+                            <a href="#">병원소개</a>
+                            <ul class=" depth02">
+                                <li>한양대학교병원</li>
+                                <li>류마티스병원</li>
+                                <li>국제병원</li>
+                                <li>발전기금</li>
+                                <li>공지사항</li>
+                            </ul>
+                        </li><!-- depth01 end -->
+
+                    </ul><!-- gnb end -->
+
+                    <div class="login">
+                        <ul>
+                            <li class="depth01">
+                                <a href="#">english</a>
+                                <ul class="depth02">
+                                    <li>中國語</li>
+                                    <li>日本語</li>
+                                </ul><!-- depth02 end -->
+                            </li><!-- depth01 end -->
+                            <li>로그인</li>
+                            <li>회원가입</li>
+                        </ul>
+                    </div><!-- login end -->
+                </nav><!-- pc end -->
+
+                <nav class="mobile mobile_menu">
+                    <img src="img/icons8-메뉴-50 (1).png" alt="">
+                </nav><!-- mobile end -->
+            </div><!-- inner end -->
+
+            <nav class="mobile mobile_gnb">
+                <img class="close" src="img/icons8-취소-50.png" alt="">
+                <ul class="gnb">
+                    <li class="depth01">
+                        <a href="#">의료진·진료과</a>
+                        <ul class=" depth02">
+                            <li>전문 의료진 찾기</li>
+                            <li>진료과·센터</li>
+                            <li>온라인 진료예약</li>
+                            <li>예약안내</li>
+                            <li>종합검진예약</li>
+                            <li>건강정보</li>
+                        </ul>
+                    </li><!-- depth01 end -->
+                    <li class="depth01">
+
+                        <a href="#">종합안내</a>
+                        <ul class=" depth02">
+                            <li>병원이용</li>
+                            <li>외래진료</li>
+                            <li>입원진료</li>
+                            <li>검사실 안내</li>
+                            <li>제증명 의무기록 발급</li>
+                            <li>비급여진료비</li>
+                            <li>기타안내</li>
+                        </ul>
+                    </li>
+                    <li class="depth01">
+
+                        <a href="#">한양story</a>
+                        <ul class=" depth02">
+                            <li>Hihy 건강저장소</li>
+                            <li>병원소식</li>
+                            <li>언론보도</li>
+                            <li>한양人</li>
+                            <li>한양토픽</li>
+                            <li>의료원 매거진</li>
+                            <li>뉴스레터</li>
+                            <li>사회공헌</li>
+                        </ul>
+                    </li><!-- depth01 end -->
+                    <li class="depth01">
+
+                        <a href="#">고객서비스</a>
+                        <ul class=" depth02">
+                            <li>자주 하는 질문</li>
+                            <li>고객상담실</li>
+                            <li>각종 양식 모음</li>
+                        </ul>
+                    </li><!-- depth01 end -->
+                    <li class="depth01">
+
+                        <a href="#">병원소개</a>
+                        <ul class=" depth02">
+                            <li>한양대학교병원</li>
+                            <li>류마티스병원</li>
+                            <li>국제병원</li>
+                            <li>발전기금</li>
+                            <li>공지사항</li>
+                        </ul>
+                    </li><!-- depth01 end -->
+
+                </ul><!-- gnb end -->
+        </header>
+        <div class="main_visual">
+            <div class="inner">
+                <figure>
+                    <img src="img/2020_01+02_Magazine_02.jpg" alt="">
+                </figure>
+            </div><!-- inner end -->
+        </div><!-- main_visual end -->
+
+        <section class="sec1">
+            <div class="inner">
+                <div class="left">
+                    <div class="list">
+                        <div class="item">
+                            <h2>빠른예약</h2>
+                            <div class="call">
+                                <figure>
+                                    <img src="img/icons8-전화-50 (1).png" alt="">
+                                </figure>
+                            </div><!-- call end -->
+                            <div class="num">
+                                <input type="text" placeholder="010">
+                                <input type="text">
+                                <input type="text">
+                            </div><!-- num end -->
+                            <button>예약신청</button>
+                        </div><!-- item end -->
+
+                        <div class="item">
+                            <h2>전화예약</h2>
+                            <div class="text">
+                                <h3>02 - 2290 - 8114</h3>
+
+                                <p>평일 08:30 ~ 17:30 / 토요일 08:30~ 12:30
+                                    <br>(공휴일 및 점심시간 제외)
+                                </p>
+                            </div><!-- text end -->
+                        </div><!-- item end -->
+                    </div><!-- list end -->
+                </div><!-- left end -->
+
+                <div class="right">
+                    <div class="list">
+                        <div class="item">
+                            <h2>의료진 · 질환명</h2>
+                            <input type="text" placeholder="질환명을 입력하세요.">
+                            <button>검색</button>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <select name="select">
+                                <option value="문의항목" selected="selected">문의항목</option>
+                                <option value="진료">진료</option>
+                                <option value="원무">원무</option>
+                                <option value="병원이용">병원이용</option>
+                            </select>
+                            <input type="text" placeholder="문의할 내용을 입력하세요.">
+                            <button>검색</button>
+                        </div><!-- item end -->
+                    </div><!-- list end -->
+                </div><!-- right end -->
+            </div><!-- inner end -->
+        </section><!-- sec1 end -->
+
+        <section class="sec2">
+            <div class="inner">
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/icons8-벨소리-볼륨-50.png" alt="">
+                        </figure>
+                        <div class="text">
+                            <h2>처음 오시는 분 예약 상담 신청</h2>
+                            <p>상담시간 : 평일 08:30 ~ 17:30 <br> (토요일·공휴일 제외)</p>
+                        </div>
+                        <div class="booking">
+                            <div class="info">
+                                <input type="text" placeholder="성함">
+                                <input type="text" placeholder="연락처">
+                            </div><!-- info end -->
+                            <button>상담<br>예약</button>
+                        </div><!-- booking end -->
+                    </div><!-- item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/icons8-감시-장치-50.png" alt="">
+                        </figure>
+                        <div class="text">
+                            <h2>온라인 진료예약/확인</h2>
+                            <p>온라인으로 쉽고 빠르게<br>
+                                진료예약을 조회하실 수 있습니다.</p>
+                        </div>
+                        <div class="btn">
+                            <button>외래진료 예약</button>
+                            <button>진료예약 확인</button>
+                        </div>
+                    </div><!-- item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/icons8-협력-50.png" alt="">
+                        </figure>
+                        <div class="text">
+
+                            <h2>진료과/센터</h2>
+                            <p>병원의 진료과 / 센터를<br>
+                                상세히 확인할 수 있습니다.</p>
+                        </div>
+                        <div class="select btn">
+                            <select class="sel" name="select">
+                                <option value="진료과를 선택하세요." selected="selected">진료과를 선택하세요.</option>
+                                <option value="가정의학과">가정의학과</option>
+                                <option value="성형외과">성형외과</option>
+                                <option value="비뇨의학과">비뇨의학과</option>
+                                <option value="외과">외과</option>
+                                <option value="이비인후과">이비인후과</option>
+                                <option value="정형외과">정형외과</option>
+                                <option value="치과">치과</option>
+                                <option value="산부인과">산부인과</option>
+                                <option value="신경외과">신경외과</option>
+                                <option value="피부과">피부과</option>
+                                <option value="안과">안과</option>
+                            </select>
+
+                            <button class="sel">바로가기</button>
+                        </div><!-- select end -->
+                    </div><!-- item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/icons8-document-50 (1).png" alt="">
+                        </figure>
+                        <div class="text">
+
+                            <h2>증명서 발급</h2>
+                            <p>온라인으로 간편하게<br>
+                                증명서를 발급받으실 수 있습니다.</p>
+                        </div>
+                        <div class="sel">
+                            <button>발급 안내</button>
+                            <button>증명서 발급</button>
+                        </div><!-- sel end -->
+                    </div><!-- item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/icons8-건강-검진-50.png" alt="">
+                        </figure>
+                        <div class="text">
+
+                            <h2>건강검진</h2>
+                            <p>건강을 지키는 첫걸음!</p>
+                        </div>
+                        <div class="sel btn">
+                            <button>개인·기업 종합검진</button>
+                            <button>국민건강보험공단 검진</button>
+                        </div>
+                    </div><!-- item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/icons8-지리적-울타리-50.png" alt="">
+                        </figure>
+                        <div class="text">
+
+                            <h2>오시는길</h2>
+                            <p>한양대학교병원으로<br>
+                                오시는 길을 알려드립니다.</p>
+                        </div>
+                        <div class="sel">
+                            <button>위치안내</button>
+                            <button>주차안내</button>
+                        </div>
+                    </div><!-- item end -->
+                </div><!-- list end -->
+            </div><!-- inner end -->
+        </section><!-- sec2 end -->
+
+
+
+        <section class="sec3">
+            <h1>한양대학교 병원소식</h1>
+            <div class="inner">
+                <ul class="menu_list">
+                    <li class="on">공지사항</li>
+                    <li>학술행사</li>
+                    <li>언론보도</li>
+                    <li>병원소식</li>
+                </ul><!-- menu_list end -->
+
+                <div class="list on">
+                    <div class="item">
+                        <figure>
+                            <img src="img/230810 광복절 휴진안내.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>광복절 휴진 안내<br>(8/15 휴진)</h3>
+                            <p>8월 15일(화)은 공휴일로 휴진입니다. 병원 이용에 참고하여 주시기 바랍니다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/230809 조직병리 의뢰서비스 이용안내.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>인체유래물은행 조직병리 의뢰서비스 이용 안내</h3>
+                            <p>한양대학교병원 의학연구원 인체유래물은행에서는 연구자 분께 연구 수행 시 필요한 조직병리 의뢰서비...</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/230615 루게릭병 환자를 위한 가족 참여 자가관리교육 프로그램.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>[이용안내] 권역응급의료센터 소아응급진료 시간표</h3>
+                            <p>한양대학교병원 권역응급의료센터에서는 소아청소년과 전문의가 소아 응급 진료를 시행하고 있으니...</p>
+
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/230424 홈커밍데이.png" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>2023년 6월 루게릭병 환자를 위한 가족 참여 자가관리교육 프로그램</h3>
+                            <p>안녕하십니까. 2023년 6월 24일 열리는 루게릭병 환자를 위한 가족 참여 자가관리교육 프로그램을..</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/230704 소아응급진료 수정본.png" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>[행사소개] 한양대학교병원
+                                신생아중환자실 홈커밍데이
+                                (5/3 오후 2시)</h3>
+                            <p>안녕하십니까.
+                                한양대학교병원 신생아중환자실에서 2023년 5월 3일 오후 2시에 홈커밍데이를...</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/0529-정상진료-안내--_EV.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>[이용안내] 정상 진료 안내 (부처님 오신날 대체공휴일 5/29 정상진료)</h3>
+                            <p>5월 29일(월) 부처님 오신날 대체공휴일은 정상 진료합니다. 병원 이용에 참고하여 주시기 바랍니다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                </div><!-- list end -->
+
+
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/230828 암센터 포스터.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>
+                                2023년 9월 암센터 '항암제 내성 극복을 위한 <br>빅데이터 활용 중개연구' 특강</h3>
+                            <p>한양대학교병원 암센터가 9월 11일 오후 5시 병원 본관 3층 강당에서 '항암제 내성 극복을 위한 빅데이터 활용 중개연구' 특강을 개최합니다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/230601 암센터 강의포스터.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>2023년 한양대학교병원 암센터 '연명의료법 시대에 임종기 의사결정' 특강 개최</h3>
+                            <p>한양대학교병원 암센터가 6월 30일 병원 본관 3층 강당에서 혈액종양내과 박권오 교수의 특별 강의를 개최합니다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/230523 장기이식공동심포지엄.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>장기이식 1000례 기념 한양대학교병원 대한이식학회 장기이식 공동 심포지엄</h3>
+                            <p>한양대학교병원 장기이식센터가 오는 6월 23일 한양대학교 의과대학에서 「장기이식 1000례기념 한양대학교병원-대한이식학회 장기이식 공동 심포지엄」을 개최합니다.
+                            </p>
+
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/한양대학교 의과대학 성형외과학교실 50주년 기념 행사 Brochure_page-0002.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>한양대학교 의과대학 성형외과학교실 50주년 기념 행사 개최</h3>
+                            <p>한양대학교 의과대학 성형외과학교실이 7월 8일 한양종합기술연구원(HIT) 6층 대강당에서 50주년 기념 행사를 개최합니다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/230530 아동청소년정신건강캠페인 대국민 공개강좌.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>아동청소년 정신건강캠페인 대국민 공개강좌 개최</h3>
+                            <p>성동구 정신건강복지센터가 6월 20일 서울 성동구청 3등 대강당에서 2023년 아동청소년 정신건강캠페인 대국민 공개강좌를 개최합니다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/피부과학교실, 제33차 동문학술대회.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>2023년 한양대병원 피부과 개원의 연수강좌 및 동문학술대회</h3>
+                            <p>한양대학교의료원 피부과학교실에서 5월 20일 오후 6시 코엑스 인터컨티넨탈 서울에서 「2023년 한양대병원 피부과 개원의 연수강좌 및 한양대학교 의과대학
+                                피부과학교실 동문 학술대회」를 개최합니다. </p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                </div><!-- list end -->
+
+
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/6038a8d5-2d3b-4942-bf54-e0a3ddf349f8.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>‘바람만 스쳐도 아픈’ 통풍, 한 해 50만 명 넘게 앓아…액상과당 음료 섭취 삼가야</h3>
+                            <p>‘바람만 스쳐도 아프다’는 말이 있을 정도로 심각한 통증을 일으키는 통풍(痛風·gout) 환자가 한 해 50만 명을 넘어섰다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/120868632.10.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>“11번 수술 견디고 다리 살려내… 등산이 더 즐거워졌다”[병을 이겨내는 사람들]</h3>
+                            <p>세균에 감염된 뼈에 염증이 생기면 골수염이 된다. 무릎 주변 부위에서 많이 발생한다. 청소년 때 발병하는 경우가 많다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/다운로드.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>성관계 0번=성기능 0점, "말 안돼"…'디지털 발기능 측정' 나선 의사</h3>
+                            <p>남성에게 성 기능은 자신감이다. 많은 남성이 음경(성기)의 크기와 발기 능력, 강직도에 목을 매는 이유다.</p>
+
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/2023082400925_0.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>달라진 독감백신 권고, 노인은 '고면역원성 백신' 우선 접종하라는데…</h3>
+                            <p>마스크 착용 의무가 해제된 지난해엔 코로나19만큼 혹은 그 이상으로 인플루엔자(독감)를 호되게 겪은 이들이 많았다.
+                            </p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/7f810e56-5f14-41cf-9161-252be18af317.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>“간암, 감염·면역 반응 우려 없는 ‘무수혈 간절제술’로도 치료 가능”</h3>
+                            <p>간은 많은 일을 하면서도 말기 간경화나 간암으로 악화해도 아프지 않아 ‘침묵의 장기’로 불린다. 간암의 5년 생존율은 37.7%로 전체 암 생존율(70.7%)의
+                                절반 수준이다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/d183d08f-3e9b-4cb2-b98b-8506ee0446d8.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>예비맘 말 못할 고통, 변비…방치했다간 이 병 걸린다 [건강한 가족]</h3>
+                            <p>엽산, 철분, 칼슘, 식이섬유…. 임신하면 으레 찾는 영양소들이다. 그러나 이들 영양소를 왜, 얼마나, 어떻게 섭취해야 하는지 정확하게 아는 사람은 그리 많지
+                                않다. </p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                </div><!-- list end -->
+
+
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/왼쪽부터 유경헌 교수, 오재훈 교수, 조용일 교수 (1).jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>심정지 생존자의 장기 생존은 사회경제적 환경이 중요</h3>
+                            <p>‘병원 밖에서 발생하는 심정지(Out-of-Hospital Cardiac Arrest, 이하 OHCA)’를 경험한 환자 중 사회경제적 환경이 낮은 의료보호
+                                환자군에서 장기적으로 사망률이 높아져 적극적인 관리가 필요하다는 연구결과가 나왔다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/2023년 후반기 정년 및 명예퇴임식.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>‘2023년 후반기 정년 및 명예퇴임식’ 개최</h3>
+                            <p>한양대학교병원(원장 이형중)은 지난 8월 21일 신관 6층 세미나실에서 ‘2023년 후반기 정년 및 명예퇴임식’을 개최했다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/온기우편함 협약식_왼쪽부터 이형중 병원장, 조현식 대표.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>사단법인 ‘온기’와 익명 고민상담 업무협약 체결</h3>
+                            <p>한양대학교병원(원장 이형중)은 지난 8월 16일 동관 8층 제1 회의실에서 사단법인 ‘온기’와 익명 고민상담 ‘온기 우편함’ 설치 및 운영관련 업무협약을
+                                체결했다. </p>
+
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/한양대학교병원 전경_web.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>‘폐렴 적정성 평가’서 5회 연속 1등급 선정</h3>
+                            <p>한양대학교병원(원장 이형중)은 건강보험심사평가원이 최근 발표한 ‘폐렴 적정성 평가’에서 5회 연속으로 1등급을 받아 ‘폐렴 치료 잘하는 병원’임을 지속적으로
+                                입증했다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/왼쪽부터 김영서 교수, 김봉영 교수.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>김영서, 김봉영 교수, 새만금 잼버리에 의료지원 나선다</h3>
+                            <p>한양대학교병원(원장 이형중)은 기록적인 폭염으로 온열질환자가 발생한 ‘2023 새만금 제25회 세계스카우트 잼버리’ 참가자들의 건강과 안전을 위해 의료지원에
+                                나섰다.</p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/2023년 캄보디아 의료봉사.jpg" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>캄보디아 오지서 의료봉사 펼쳐</h3>
+                            <p>한양대학교병원(원장 이형중) 의료진이 지난 7월 27일부터 31일까지 캄보디아 시아누크빌주 봇뱅 마을(Botveng Village)과 수도 프놈펜에서 의료봉사
+                                활동을 펼쳤다. </p>
+                        </div><!-- text end -->
+                    </div><!-- item end -->
+                </div><!-- list end -->
+            </div><!-- inner end -->
+
+        </section><!-- sec3 end -->
+
+        <section class="sec4">
+            <div class="title">
+                <h1>Hihy 건강저장소</h1>
+                <span>더 보기</span>
+            </div><!-- title end -->
+            <div class="inner">
+                <div class="list">
+
+                    <!-- <div class="item">
+
+                    </div> -->
+                    <div class="imglist on hy">
+                        <div class="item">
+                            <figure>
+                                <img src="img/230814 박진화 교수.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <h2>역류성 식도염 심해지면 식도암?</h2>
+                                <p>만성기침, 타들어가는 가슴쓰림, 목통증이 있다면?? <br> 나도 역류성식도염? 역류성식도염이 심해지면 식도암으로 전이될 수 있어</p>
+                                <span>more > </span>
+                            </div>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <figure>
+                                <img src="img/230517 정용호 교수.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <h2>가슴 답답함, 기흉이 원인이다? </h2>
+                                <p>만성기침, 타들어가는 가슴쓰림, 목통증이 있다면?? <br> 나도 역류성식도염? 역류성식도염이 심해지면 식도암으로 전이될 수 있어</p>
+                                <span>more ></span>
+
+                            </div>
+                        </div><!-- item end -->
+                    </div>
+                    <div class="imglist hy">
+                        <div class="item">
+                            <figure>
+                                <img src="img/230502 소아응급질환.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <h2>아이가 열날 때, 무조건 응급실 가야 한다?</h2>
+                                <p>여러분이 궁금해하시는 건강에 대한 모든 것! 무엇이든 물어보세요<BR>건강 관련 궁금증을 속 시~원히 해결해주는 "닥터에게 묻다!</p>
+                                <span>more > </span>
+                            </div>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <figure>
+                                <img src="img/maxresdefault.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <h2>조숙한 신체발달도 질병이다?</h2>
+                                <p>최근 성조숙증으로 병원을 찾는 아이들이 많습니다.
+
+                                    특히 여자아이가 많은데 너무 빠르게 사춘기를 겪게 되면 여러 문제가 발생할 수 있습니다. </p>
+                                <span>more ></span>
+
+                            </div>
+                        </div><!-- item end -->
+                    </div>
+                    <div class="imglist hy">
+                        <div class="item">
+                            <figure>
+                                <img src="img/ahr.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <h2>목 뻐근한 사람 주목!! 현직 의사가 설명해주는 류마티스 척추질환!</h2>
+                                <p>요즘 목이 자꾸 뻐근한 느낌이 든다면 주목!
+                                    오늘 한양대학교병원 hihy건강저장소에서는 경추 질환의 특징과 치료, 특히 많은 분들이 궁금해하실 거북목의 치료에 대해서도 준비가 되어 있으니 영상을
+                                    끝까지 봐주세요!</p>
+                                <span>more ></span>
+                            </div>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <figure>
+                                <img src="img/wktprywjd.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <h2>[EP8.] 긴장성 두통! 자세교정이 치료 방법이다?!</h2>
+                                <p>뒷목 근육이 원인? 긴장성 두통, 자세교정이 치료 방법이다?! 환자분들의 궁금증을 지혜롭게 풀어주는 "닥터솔로몬" 여덟 번째 이야기 "두통과 재활치료"
+                                </p>
+                                <span>more ></span>
+
+                            </div>
+                        </div><!-- item end -->
+                    </div>
+                    <div class="imglist hy">
+                        <div class="item">
+                            <figure>
+                                <img src="img/clrhk.jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <h2>치아 교정치료 중 '이것' 잘 못하면 충치나 잇몸염증을 유발할 수 있다?</h2>
+                                <p>치아 교정치료 중 구강위생관리에 대한 궁금증을 풀어주는 "닥터에게 묻다" 오늘의 이야기 "치아 교정치료 중 구강위생관리"
+                                    영상으로 확인해볼까요?</p>
+                                <span>more > </span>
+                            </div>
+                        </div><!-- item end -->
+                        <div class="item">
+                            <figure>
+                                <img src="img/maxresdefault (1).jpg" alt="">
+                            </figure>
+                            <div class="text">
+                                <h2>임플란트, 하루만에 수술 가능하다?!</h2>
+                                <p>임플란트 치료에 대해서 궁금해 하시는 분들을 위해 최근 임플란트 기술들은 무엇이 있는지, 기존 임플란트 수술의 불편한 점은 무엇인지 등 임플란트 수술에
+                                    대해서 하이하이(hihy) 건강저장소에서 꼼꼼하게 알려드립니다.</p>
+                                <span>more ></span>
+
+                            </div>
+                        </div><!-- item end -->
+                    </div>
+
+                    <div class="item">
+                        <ul class="item_list hy">
+                            <li on><!-- 흡연하면 방광암에 걸린다? -->역류성식도염, 심해지면 식도암?</li>
+                            <li>우리 아이 건강! 무엇이든 물어보세요</li>
+                            <li>목 뻐근한 사람 주목!</li>
+                            <li>치과의사가 알려주는 치아관리법</li>
+                            <div class="box">
+                                <p>나와 가족, 지인의 건강을 위해<br>건강 소식을 공유해 보세요!</p>
+                                <a href="#">공유하기</a>
+                            </div>
+                        </ul>
+                    </div><!-- item end -->
+                </div><!-- list end -->
+            </div><!-- inner end -->
+        </section><!-- sec4 end -->
+
+        <footer>
+            <div class="inner">
+                <ul>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">환자의 권리와 의무</a></li>
+                    <li><a href="#">회원약관</a></li>
+                    <li><a href="#">비급여진료비</a></li>
+                    <li><a href="#">의료질지표</a></li>
+                    <li><a href="#">윤리강령</a></li>
+                    <li><a href="#">홈페이지이용문의</a></li>
+                </ul>
+                <div class="hyinfo">
+                    <div>
+                        <h2>대표전화 : 02-2290-8114</h2>
+                        <p>(04763) 서울특별시 성동구 왕십리로 222-1</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="#"><img src="img/btn_youtube_01.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/btn_kakao_01.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/btn_p_01.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/btn_blog_01.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/btn_facebook_01.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div><!-- hyinfo -->
+                <div class="site">
+                    <div class="left">
+                        <div>
+                            <figure>
+                                <img src="img/한양대학교병원_한영혼용.png" alt="">
+                            </figure>
+                        </div>
+
+                        <div class="text">
+                            <figure><img src="img/보건복지부 지정 권역응급의료센터_.png" alt=""></figure>
+                        </div>
+
+                        <div>
+                            <figure><img src="img/Layer 1.png" alt=""></figure>
+                        </div>
+
+                        <div class="text">
+                            <figure><img src="img/인증범위.png" alt=""></figure>
+                        </div>
+                    </div><!-- left end -->
+                    <div class="right">
+                        <select name="site">
+                            <option value="패밀리사이트">패밀리사이트</option>
+                            <option value="한양대학교병원">한양대학교병원</option>
+                            <option value="의료원">의료원</option>
+                            <option value="한양대학교구리병원">한양대학교구리병원</option>
+                            <option value="한양대학교류마티스병원">한양대학교류마티스병원</option>
+                            <option value="한양대학교국제병원">한양대학교국제병원</option>
+                        </select>
+                    </div><!-- right end -->
+                </div><!-- site end -->
+            </div><!-- inner end -->
+        </footer>
+    </div><!-- wrap end -->
+</body>
+
+</html>
