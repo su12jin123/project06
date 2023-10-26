@@ -1246,6 +1246,11 @@ footer .inner .site .right select {
     margin-bottom: 2rem;
   }
 
+  .sec4 .title h1{
+    font-size: 4rem;
+  }
+  .sec4 .inner{margin-top: 2rem;}
+
   .sec3 .inner .list .item {
     width: 49.3%;
   }
@@ -1363,8 +1368,9 @@ footer .inner .site .right select {
     border-top: 0;
   }
 
-  .sec4 .inner .list .item .item_list li {
-    font-size: 2.3rem;
+  .sec4 .inner .list .item .item_list .box p{
+    font-size: 1.7rem;
+    line-height: 2.5rem;
   }
 
   footer .inner ul li {
